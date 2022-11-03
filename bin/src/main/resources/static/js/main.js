@@ -25,8 +25,7 @@ function connect(event) {
 
         var socket = new SockJS('/ws');
         stompClient = Stomp.over(socket);
-        //add an image after click
-		//document.body.style.backgroundImage = "url('/images/bg1.png')";
+
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
